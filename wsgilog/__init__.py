@@ -85,6 +85,9 @@ class LogStdout(object):
     def write(self, info):
         '''Writes non-whitespace strings to logger.'''
         if info.lstrip().rstrip() != '': self.logger(info)
+            
+    def flush(self):
+        pass
 
 
 class WsgiLog(object):
